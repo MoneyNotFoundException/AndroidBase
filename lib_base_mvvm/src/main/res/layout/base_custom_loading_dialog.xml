@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wheel="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_dialog"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/base_progress_dialog_shape"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/base_dip_15"
+              android:paddingLeft="@dimen/base_dip_20"
+              android:paddingRight="@dimen/base_dip_20"
+              android:paddingTop="@dimen/base_dip_15">
+
+    <cn.lianshi.library.mvvmbase.widget.mdui.ProgressWheel
+        android:layout_width="@dimen/base_dip_35"
+        android:layout_height="@dimen/base_dip_35"
+        wheel:matProg_barColor="@color/base_colorWhite"
+        wheel:matProg_progressIndeterminate="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/base_dip_8"
+        android:textColor="@color/base_colorWhite"
+        android:textSize="@dimen/base_sp_14"/>
+
+</LinearLayout>

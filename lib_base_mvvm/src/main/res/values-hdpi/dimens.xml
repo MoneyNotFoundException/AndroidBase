@@ -1,0 +1,41 @@
+<resources>
+    <dimen name="base_margin_10">8.5dp</dimen>
+    <dimen name="base_margin_40">34dp</dimen>
+    <dimen name="base_magin_15">12.75dp</dimen>
+    <dimen name="base_margin_15">12.75dp</dimen>
+    <dimen name="base_magin_12">10.2dp</dimen>
+    <dimen name="base_padding_10">8.5dp</dimen>
+    <dimen name="base_margin_0_5">0.8dp</dimen>
+
+
+    <dimen name="base_margin_9">7.65dp</dimen>
+    <dimen name="base_padding_18">18dp</dimen>
+
+
+    <dimen name="base_dip_5">4.25dp</dimen>
+    <dimen name="base_dip_50">42.5dp</dimen>
+    <dimen name="base_dip_24">20.4dp</dimen>
+    <dimen name="base_dip_20">17dp</dimen>
+    <dimen name="base_dip_2">1.7dp</dimen>
+    <dimen name="base_dip_8">6.8dp</dimen>
+    <dimen name="base_dip_40">34dp</dimen>
+    <dimen name="base_dip_15">12.75dp</dimen>
+    <dimen name="base_dip_18">15.3dp</dimen>
+    <dimen name="base_dip_10">8.5dp</dimen>
+    <dimen name="base_dip_25">21.25dp</dimen>
+    <dimen name="base_dip_30">25.5dp</dimen>
+    <dimen name="base_dip_35">29.75dp</dimen>
+    <dimen name="base_dip_12">10.2dp</dimen>
+    <dimen name="base_dip_14">11.9dp</dimen>
+    <dimen name="base_sp_30">25.5sp</dimen>
+    <dimen name="base_sp_14">13sp</dimen>
+    <dimen name="base_sp_15">13sp</dimen>
+    <dimen name="base_sp_18">15sp</dimen>
+    <dimen name="base_sp_13">12sp</dimen>
+    <dimen name="base_sp_12">11sp</dimen>
+
+    <dimen name="base_dip_39">33.15dp</dimen>
+    <dimen name="base_dip_4">3.4dp</dimen>
+    <dimen name="base_dip_250">212.5dp</dimen>
+
+</resources>

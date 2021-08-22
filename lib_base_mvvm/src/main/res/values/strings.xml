@@ -1,0 +1,14 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--<string name="base_app_name_oppo">贷款助手-借钱借款分期</string>-->
+    <string name="base_loading">加载中</string>
+
+
+    <string name="base_error_gif">长宽不小于 %1$dpx，且大小不超过 %2$sM。</string>
+
+
+
+    <string name="base_cancel">取消</string>
+    <string name="base_confirm">确定</string>
+
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="adc" />
+    <version value="1" />
+    <hotKeyList>
+<!--        <list>-->
+<!--            <mapping class="com.lianshi.duanshipin.bean.CaoGaoBean"/>-->
+<!--        </list>-->
+
+    </hotKeyList>
+</litepal>

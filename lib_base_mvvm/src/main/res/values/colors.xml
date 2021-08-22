@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="base_colorPrimaryDark">#0072ff</color>
+    <!--<color name="base_colorPrimaryDark">#508ae6</color>-->
+    <color name="base_colorWhite">#ffffff</color>
+    <color name="base_colorText1">#666666</color>
+    <color name="base_colorTransform">#00ffffff</color>
+    <color name="base_colorText3">#333333</color>
+    <color name="base_colorText3trans">#dd333333</color>
+    <color name="base_colorText6">#999999</color>
+    <color name="base_color0072ff">#0072ff</color>
+    <color name="base_float_transparent">#00000000</color>
+    <color name="base_90FF00">#90FF00</color>
+
+
+    <!--pickerview-->
+    <color name="base_pickerview_topbar_title">#0063b0</color>
+
+    <!--覆盖颜色-->
+
+
+    <color name="base_background_tab_pressed">#1133B5E5</color>
+    <color name="base_colorText34">#343434</color>
+    <color name="base_colorText40">#222222</color>
+    <color name="base_colorText43">#bdbdbd</color>
+    <color name="base_colorText44">#dfdfdf</color>
+
+
+    <color name="base_1976D2" tools:keep="@color/base_1976D2">#1976D2</color>
+
+    <!--<color name="base_colorPrimaryDark">#508ae6</color>-->
+    <color name="base_colorPointFocus" tools:keep="@color/base_colorPointFocus">#995d04</color>
+    <color name="base_colorBtnBg" tools:keep="@color/base_colorBtnBg">#5592e9dd</color>
+    <color name="base_textColorBlue" tools:keep="@color/base_textColorBlue">#0067b7</color>
+    <color name="base_colorGv1" tools:keep="@color/base_colorGv1">#508ae6</color>
+    <color name="base_color_gesture_d3dae5" tools:keep="@color/base_color_gesture_d3dae5">#d3dae5</color>
+    <color name="base_color_gesture_01a2fe" tools:keep="@color/base_color_gesture_01a2fe">#01a2fe</color>
+    <color name="base_colorGv2" tools:keep="@color/base_colorGv2">#21d49f</color>
+    <color name="base_colorff66666" tools:keep="@color/base_colorff66666">#ff6666</color>
+    <color name="base_colorShaixuan" tools:keep="@color/base_colorShaixuan">#efeff4</color>
+    <color name="base_colorCommitBg" tools:keep="@color/base_colorCommitBg">#90ffffff</color>
+    <color name="base_colorGv4" tools:keep="@color/base_colorGv4">#fa5d5d</color>
+    <color name="base_colorGv8" tools:keep="@color/base_colorGv8">#fa7576</color>
+    <color name="base_colorDevide" tools:keep="@color/base_colorDevide">#5492f4</color>
+    <color name="base_colorAccount" tools:keep="@color/base_colorAccount">#13c287</color>
+    <color name="base_color_328dd3" tools:keep="@color/base_color_328dd3">#328dd3</color>
+    <color name="base_colorProgressWheel" tools:keep="@color/base_colorProgressWheel">#5588FF</color>
+    <color name="base_colorProgressWheelalpa" tools:keep="@color/base_colorProgressWheelalpa">#995588FF</color>
+    <color name="base_colorTvBg" tools:keep="@color/base_colorTvBg">#e8f7fe</color>
+    <color name="base_colorBtnBg2" tools:keep="@color/base_colorBtnBg2">#ff3333</color>
+    <color name="base_colorBtnBg3" tools:keep="@color/base_colorBtnBg3">#6699cc</color>
+    <color name="base_colorhalfTransform1" tools:keep="@color/base_colorhalfTransform1">#10000000</color>
+    <color name="base_colorLetter" tools:keep="@color/base_colorLetter">#e6e6e6</color>
+    <color name="base_colorText2" tools:keep="@color/base_colorText2">#fedc1f</color>
+    <color name="base_color_FEAC51" tools:keep="@color/base_color_FEAC51">#FEAC51</color>
+    <color name="base_sc_transparent_background" tools:keep="@color/base_sc_transparent_background">#00111111</color>
+    <color name="base_dialogTitle" tools:keep="@color/base_dialogTitle">#302f30</color>
+    <color name="base_dialogText" tools:keep="@color/base_dialogText">#979197</color>
+    <color name="base_colorBtnBg4" tools:keep="@color/base_colorBtnBg4">#8dd817</color>
+    <color name="base_colorBtnBg5" tools:keep="@color/base_colorBtnBg5">#77c203</color>
+    <color name="base_textcolorNormal1" tools:keep="@color/base_textcolorNormal1">#373633</color>
+    <color name="base_textColorYaoqing" tools:keep="@color/base_textColorYaoqing">#8d8d8d</color>
+    <color name="base_colorText4" tools:keep="@color/base_colorText4">#e7f6ff</color>
+    <color name="base_colorText5" tools:keep="@color/base_colorText5">#a2dbff</color>
+    <color name="base_colorFF9933" tools:keep="@color/base_colorFF9933">#FF9933</color>
+    <color name="base_color0072ffArg" tools:keep="@color/base_color0072ffArg">#200072ff</color>
+    <color name="base_colorB6DBF7" tools:keep="@color/base_colorB6DBF7">#B6DBF7</color>
+    <color name="base_colorGv5" tools:keep="@color/base_colorGv5">#b78053</color>
+    <color name="base_colorGv6" tools:keep="@color/base_colorGv6">#a148ae</color>
+    <color name="base_colorGv7" tools:keep="@color/base_colorGv7">#6773aa</color>
+    <color name="base_colorText9" tools:keep="@color/base_colorText9">#ff6734</color>
+    <color name="base_colorText14" tools:keep="@color/base_colorText14">#ff7034</color>
+    <color name="base_colorBg6" tools:keep="@color/base_colorBg6">#55ffe600</color>
+    <color name="base_colorBg7" tools:keep="@color/base_colorBg7">#11000000</color>
+    <color name="base_colorBg10" tools:keep="@color/base_colorBg10">#0163ad</color>
+    <color name="base_colorBg11" tools:keep="@color/base_colorBg11">#037fe0</color>
+    <color name="base_colorBg_ff74b9" tools:keep="@color/base_colorBg_ff74b9">#ff74b9</color>
+    <color name="base_colorBg_f5f8ff" tools:keep="@color/base_colorBg_f5f8ff">#f5f8ff</color>
+    <color name="base_colorBg_e3f0ff" tools:keep="@color/base_colorBg_e3f0ff">#e3f0ff</color>
+    <color name="base_colorBg_327ff1" tools:keep="@color/base_colorBg_327ff1">#327ff1</color>
+    <color name="base_textViewBack_e2e2e2" tools:keep="@color/base_textViewBack_e2e2e2">#e2e2e2</color>
+    <color name="base_colorXmShiting" tools:keep="@color/base_colorXmShiting">#FFF1AE12</color>
+    <color name="base_colorsearch1" tools:keep="@color/base_colorsearch1">#ff3333</color>
+    <color name="base_colorsearch2" tools:keep="@color/base_colorsearch2">#ff6600</color>
+    <color name="base_colorsearch3" tools:keep="@color/base_colorsearch3">#ffcc00</color>
+
+
+    <!--pickerview-->
+    <color name="base_pickerview_timebtn_nor" tools:keep="@color/base_pickerview_timebtn_nor">#508ae6</color>
+    <color name="base_pickerview_timebtn_pre" tools:keep="@color/base_pickerview_timebtn_pre">#c2daf5</color>
+    <color name="base_pickerview_wheelview_textcolor_out" tools:keep="@color/base_pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="base_pickerview_wheelview_textcolor_center" tools:keep="@color/base_pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="base_pickerview_wheelview_textcolor_divider" tools:keep="@color/base_pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <!--覆盖颜色-->
+    <color name="base_bgColor_overlay" tools:keep="@color/base_bgColor_overlay">#60000000</color>
+
+    <!--datatimepicker-->
+    <color name="base_white" tools:keep="@color/base_white">#ffffffff</color>
+    <color name="base_circle_background" tools:keep="@color/base_circle_background">#fff2f2f2</color>
+    <color name="base_line_background" tools:keep="@color/base_line_background">#ffcccccc</color>
+    <color name="base_done_text_color_normal" tools:keep="@color/base_done_text_color_normal">#508ae6</color>
+    <color name="base_done_text_color_disabled" tools:keep="@color/base_done_text_color_disabled">#ffcccccc</color>
+    <color name="base_blue" tools:keep="@color/base_blue">#508ae6</color>
+    <color name="base_darker_blue" tools:keep="@color/base_darker_blue">#508ae6</color>
+    <color name="base_date_picker_text_normal" tools:keep="@color/base_date_picker_text_normal">#ff999999</color>
+    <color name="base_calendar_header" tools:keep="@color/base_calendar_header">#508ae6</color>
+    <color name="base_date_picker_view_animator" tools:keep="@color/base_date_picker_view_animator">#fff2f2f2</color>
+    <color name="base_ampm_text_color" tools:keep="@color/base_ampm_text_color">#8c8c8c</color>
+    <color name="base_numbers_text_color" tools:keep="@color/base_numbers_text_color">#8c8c8c</color>
+    <color name="base_transparent_black" tools:keep="@color/base_transparent_black">#7F000000</color>
+
+    <color name="base_colorText11" tools:keep="@color/base_colorText11">#373633</color>
+    <color name="base_colorBg9" tools:keep="@color/base_colorBg9">#ededed</color>
+    <color name="base_colorBgtitle" tools:keep="@color/base_colorBgtitle">#f5f5f5</color>
+    <color name="base_colorbg10" tools:keep="@color/base_colorbg10">#f5f5f5</color>
+    <color name="base_colorText15" tools:keep="@color/base_colorText15">#4dc95e</color>
+    <color name="base_colorText16" tools:keep="@color/base_colorText16">#a56de5</color>
+    <color name="base_colorText17" tools:keep="@color/base_colorText17">#2499f6</color>
+    <color name="base_colorText18" tools:keep="@color/base_colorText18">#44c8c7</color>
+    <color name="base_colorText19" tools:keep="@color/base_colorText19">#ff3b3b</color>
+    <color name="base_colorText21" tools:keep="@color/base_colorText21">#fd4848</color>
+    <color name="base_colorText22" tools:keep="@color/base_colorText22">#747474</color>
+    <color name="base_colorText23" tools:keep="@color/base_colorText23">#e7e7e7</color>
+    <color name="base_colorNewShishiRenshu" tools:keep="@color/base_colorNewShishiRenshu">#91acfb</color>
+    <color name="base_colorText24" tools:keep="@color/base_colorText24">#409ce9</color>
+    <color name="base_colorText25" tools:keep="@color/base_colorText25">#42b533</color>
+    <color name="base_colorText26" tools:keep="@color/base_colorText26">#b542a6</color>
+    <color name="base_colorText27" tools:keep="@color/base_colorText27">#ffb801</color>
+    <color name="base_colorText28" tools:keep="@color/base_colorText28">#f16565</color>
+    <color name="base_colorText29" tools:keep="@color/base_colorText29">#ff85a0</color>
+    <color name="base_colorText30" tools:keep="@color/base_colorText30">#c14a69</color>
+    <color name="base_colorText31" tools:keep="@color/base_colorText31">#fddb3c</color>
+    <color name="base_colorText32" tools:keep="@color/base_colorText32">#ff6666</color>
+    <color name="base_colorTextcc" tools:keep="@color/base_colorTextcc">#cccccc</color>
+    <color name="base_textBgtop" tools:keep="@color/base_textBgtop">#ffecb2</color>
+    <color name="base_bgSuit" tools:keep="@color/base_bgSuit">#72befe</color>
+    <color name="base_bgSuit2" tools:keep="@color/base_bgSuit2">#2ad79c</color>
+    <color name="base_colorWebviewBg" tools:keep="@color/base_colorWebviewBg">#55ededed</color>
+    <color name="base_colorText33" tools:keep="@color/base_colorText33">#d4deec</color>
+    <color name="base_colorText35" tools:keep="@color/base_colorText35">#689cd7</color>
+    <color name="base_colorText36" tools:keep="@color/base_colorText36">#0272c9</color>
+    <color name="base_colorText37" tools:keep="@color/base_colorText37">#0092dc</color>
+    <color name="base_colorText38" tools:keep="@color/base_colorText38">#ff6216</color>
+    <color name="base_colorText39" tools:keep="@color/base_colorText39">#3a9fd1</color>
+    <color name="base_colorText41" tools:keep="@color/base_colorText41">#a5b6cb</color>
+    <color name="base_colorText42" tools:keep="@color/base_colorText42">#2b6396</color>
+    <color name="base_colorText45" tools:keep="@color/base_colorText45">#659fd7</color>
+    <color name="base_colorText46" tools:keep="@color/base_colorText46">#B3ffffff</color>
+    <color name="base_colortransoprt" tools:keep="@color/base_colortransoprt">#41000000</color>
+    <color name="base_colorZxSQBG" tools:keep="@color/base_colorZxSQBG">#cc3598fe</color>
+    <color name="base_colorZxBtnBG" tools:keep="@color/base_colorZxBtnBG">#036cd8</color>
+
+    <color name="base_top_bar_normal_bg" tools:keep="@color/base_top_bar_normal_bg">#0063b0</color>
+    <color name="base_color_0066fb" tools:keep="@color/base_color_0066fb">#0066fb</color>
+    <color name="base_colorNianliDazi" tools:keep="@color/base_colorNianliDazi">#37afe3</color>
+
+
+    <color name="base_a0072ff" tools:keep="@color/base_a0072ff">#0072ff</color>
+    <color name="base_fc3e3e" tools:keep="@color/base_fc3e3e">#fc3e3e</color>
+    <color name="base_a57acf9" tools:keep="@color/base_a57acf9">#57acf9</color>
+    <color name="base_a00cb7c" tools:keep="@color/base_a00cb7c">#00cb7c</color>
+    <color name="base_f7f7f7" tools:keep="@color/base_f7f7f7">#f7f7f7</color>
+    <color name="base_ab007aff" tools:keep="@color/base_ab007aff">#007aff</color>
+    <color name="base_adadad" tools:keep="@color/base_adadad">#adadad</color>
+    <color name="base_eeeeee" tools:keep="@color/base_eeeeee">#eeeeee</color>
+    <color name="base_feffed" tools:keep="@color/base_feffed">#feffed</color>
+    <color name="base_a7e6b31" tools:keep="@color/base_a7e6b31">#7e6b31</color>
+    <color name="base_dcdadb" tools:keep="@color/base_dcdadb">#dcdadb</color>
+    <color name="base_c8c9cd" tools:keep="@color/base_c8c9cd">#c8c9cd</color>
+    <color name="base_edeef0" tools:keep="@color/base_edeef0">#edeef0</color>
+    <color name="base_D6E6FF" tools:keep="@color/base_D6E6FF">#D6E6FF</color>
+
+    <color name="base_bec4c8" tools:keep="@color/base_bec4c8">#bec4c8</color>
+    <color name="base_a404148" tools:keep="@color/base_a404148">#404148</color>
+    <color name="base_a898989" tools:keep="@color/base_a898989">#898989</color>
+    <color name="base_ff7d60" tools:keep="@color/base_ff7d60">#ff7d60</color>
+    <color name="base_fcd061" tools:keep="@color/base_fcd061">#fcd061</color>
+    <color name="base_e4a812" tools:keep="@color/base_e4a812">#e4a812</color>
+    <color name="base_d59f9a" tools:keep="@color/base_d59f9a">#d59f9a</color>
+    <color name="base_ff6f6f" tools:keep="@color/base_ff6f6f">#ff6f6f</color>
+    <color name="base_d2404a" tools:keep="@color/base_d2404a">#d2404a</color>
+    <color name="base_e94b3a" tools:keep="@color/base_e94b3a">#e94b3a</color>
+    <color name="base_a9d264" tools:keep="@color/base_a9d264">#a9d264</color>
+    <color name="base_a27af60" tools:keep="@color/base_a27af60">#27af60</color>
+    <color name="base_a0eae9b" tools:keep="@color/base_a0eae9b">#0eae9b</color>
+    <color name="base_a3499dc" tools:keep="@color/base_a3499dc">#3499dc</color>
+    <color name="base_a2c3e50" tools:keep="@color/base_a2c3e50">#2c3e50</color>
+    <color name="base_c1392b" tools:keep="@color/base_c1392b">#c1392b</color>
+    <color name="base_a2a2f33" tools:keep="@color/base_a2a2f33">#2a2f33</color>
+
+    <color name="base_a25252f" tools:keep="@color/base_a25252f">#25252f</color>
+    <color name="base_a4169e1" tools:keep="@color/base_a4169e1">#4169e1</color>
+    <color name="base_a3070f0" tools:keep="@color/base_a3070f0">#3070f0</color>
+
+
+    <color name="base_e9eff2" tools:keep="@color/base_e9eff2">#e9eff2</color>
+    <color name="base_f6fafc" tools:keep="@color/base_f6fafc">#f6fafc</color>
+    <color name="base_a000000" tools:keep="@color/base_a000000">#000000</color>
+
+
+    <color name="base_verticallinebgcolor" tools:keep="@color/base_verticallinebgcolor">#fff</color>
+    <color name="base_background_color" tools:keep="@color/base_background_color">#FF111111</color>
+    <color name="base_color_chizhi_text" tools:keep="@color/base_color_chizhi_text">#39EDB7</color>
+    <color name="base_color_chizhi_bg" tools:keep="@color/base_color_chizhi_bg">#4dd3a1</color>
+    <color name="base_solarTextColor" tools:keep="@color/base_solarTextColor">#000000</color>
+    <color name="base_lunarTextColor" tools:keep="@color/base_lunarTextColor">#B2B2B2</color>
+    <color name="base_hintColor" tools:keep="@color/base_hintColor">#999999</color>
+    <color name="base_selectCircleColor" tools:keep="@color/base_selectCircleColor">#39AF81</color>
+    <color name="base_holidayColor" tools:keep="@color/base_holidayColor">#39AF81</color>
+    <color name="base_workdayColor" tools:keep="@color/base_workdayColor">#EC7230</color>
+    <color name="base_pointColor" tools:keep="@color/base_pointColor">#B2B2B2</color>
+
+    <color name="base_a0074ff" tools:keep="@color/base_a0074ff">#0074ff</color>
+    <color name="base_a7c59ef" tools:keep="@color/base_a7c59ef">#7c59ef</color>
+    <color name="base_ff99ff" tools:keep="@color/base_ff99ff">#ff99ff</color>
+
+    <color name="base_ic_back_press" tools:keep="@color/base_ic_back_press">#323336</color>
+    <color name="base_ip_color_primary" tools:keep="@color/base_ip_color_primary">#393A3F</color>
+    <color name="base_ip_color_primary_dark" tools:keep="@color/base_ip_color_primary_dark">#303135</color>
+    <color name="base_ip_color_primary_trans" tools:keep="@color/base_ip_color_primary_trans">#ec2f3335</color>
+    <color name="base_ip_color_press" tools:keep="@color/base_ip_color_press">#ffe0e0e0</color>
+    <color name="base_ip_camera_pre" tools:keep="@color/base_ip_camera_pre">#353535</color>
+    <color name="base_ip_color_accent" tools:keep="@color/base_ip_color_accent">#1AAD19</color>
+    <color name="base_ip_text_secondary_inverted" tools:keep="@color/base_ip_text_secondary_inverted">#66ffffff</color>
+    <color name="base_ip_text_primary_inverted" tools:keep="@color/base_ip_text_primary_inverted">#ffffff</color>
+
+    <color name="base_a0A54E7" tools:keep="@color/base_a0A54E7">#0A54E7</color>
+    <color name="base_a2d3132" tools:keep="@color/base_a2d3132">#2d3132</color>
+    <color name="base_a010101" tools:keep="@color/base_a010101">#010101</color>
+    <color name="base_a70000000" tools:keep="@color/base_a70000000">#70000000</color>
+    <color name="base_ff3333" tools:keep="@color/base_ff3333">#ff3333</color>
+    <color name="base_FF6666" tools:keep="@color/base_FF6666">#FF6666</color>
+    <color name="base_FF0000" tools:keep="@color/base_FF0000">#FF0000</color>
+    <color name="base_a10000000" tools:keep="@color/base_a10000000">#10000000</color>
+    <color name="base_a00000000" tools:keep="@color/base_a00000000">#00000000</color>
+
+    <color name="base_colorAsterMain" tools:keep="@color/base_colorAsterMain">#4d23f3</color>
+    <color name="base_colorZodiacMain" tools:keep="@color/base_colorZodiacMain">#d03f3f</color>
+    <color name="base_f6f6f6" tools:keep="@color/base_f6f6f6">#f6f6f6</color>
+    <color name="base_cc0000" tools:keep="@color/base_cc0000">#cc0000</color>
+    <color name="base_ff6600" tools:keep="@color/base_ff6600">#ff6600</color>
+    <color name="base_ffcc00" tools:keep="@color/base_ffcc00">#ffcc00</color>
+    <color name="base_a3070f6" tools:keep="@color/base_a3070f6">#3070f6</color>
+    <color name="base_c6defe" tools:keep="@color/base_c6defe">#c6defe</color>
+    <color name="base_a3983f6" tools:keep="@color/base_a3983f6">#3983f6</color>
+    <color name="base_acacac" tools:keep="@color/base_acacac">#acacac</color>
+    <color name="base_ececec" tools:keep="@color/base_ececec">#ececec</color>
+    <color name="base_ban_tou_ming" tools:keep="@color/base_ban_tou_ming">#80000000</color>
+
+    <color name="base_cc9a867" tools:keep="@color/base_cc9a867">#c9a867</color>
+    <color name="base_c333233" tools:keep="@color/base_c333233">#333233</color>
+    <color name="base_c201f20" tools:keep="@color/base_c201f20">#201f20</color>
+    <color name="base_ca0a0a0" tools:keep="@color/base_ca0a0a0">#a0a0a0</color>
+    <color name="base_fafafa" tools:keep="@color/base_fafafa">#fafafa</color>
+    <color name="base_color959595" tools:keep="@color/base_color959595">#959595</color>
+    <color name="base_c3c3b3c" tools:keep="@color/base_c3c3b3c">#3c3b3c</color>
+
+    <color name="base_09090F">#09090F</color>
+    <color name="base_040406">#040406</color>
+    <color name="base_696b75">#696B75</color>
+    <color name="base_A0a3aD">#A0A3AD</color>
+</resources>

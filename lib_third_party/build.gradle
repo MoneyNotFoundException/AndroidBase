@@ -1,0 +1,77 @@
+apply plugin: "com.android.library"
+
+def config = rootProject.ext.android
+
+android {
+
+    compileSdkVersion config.compileSdkVersion
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isBuildModule.toBoolean()) {
+            } else {
+                resources {
+                    //正式版本时，排除debug文件夹下所有调试文件
+                    exclude 'src/debug/*'
+                }
+            }
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+        }
+
+        debugTest {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+        }
+    }
+
+    //统一资源前缀，规范资源引用
+    resourcePrefix "thirdlib_"
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':lib_base_mvvm')
+    //友盟
+    api rootProject.ext.dependencies["umeng-sdk"]
+    api rootProject.ext.dependencies["umeng-common"]
+    //    api rootProject.ext.dependencies["umeng-share-core"]
+    //    api rootProject.ext.dependencies["umeng-share-qq"]
+    //    api rootProject.ext.dependencies["umeng-share-wechat"]
+    //    api rootProject.ext.dependencies["umeng-share-sina"]
+    //    api rootProject.ext.dependencies["umeng-share-widget"]
+}

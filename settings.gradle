@@ -1,0 +1,4 @@
+include ':app'
+include ':lib_third_party'
+include ':lib_base_mvvm'
+

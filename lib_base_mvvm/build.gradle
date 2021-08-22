@@ -1,0 +1,220 @@
+apply plugin: "com.android.library"
+
+def config = rootProject.ext.android
+
+android {
+
+    compileSdkVersion config.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+
+        //阿里路由框架配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            if (isBuildModule.toBoolean()) {
+            } else {
+                resources {
+                    //正式版本时，排除debug文件夹下所有调试文件
+                    exclude 'src/debug/*'
+                }
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "BASE_URL", BASE_URL_TS
+            buildConfigField "String", "SHOPPING_MALL", SHOPPING_MALL_TS
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+        }
+
+        debugTest {
+            minifyEnabled false
+            buildConfigField "String", "BASE_URL", BASE_URL_TS
+            buildConfigField "String", "SHOPPING_MALL", SHOPPING_MALL_TS
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+        }
+
+        release {
+            minifyEnabled false
+            buildConfigField "String", "BASE_URL", BASE_URL_ZS
+            buildConfigField "String", "SHOPPING_MALL", SHOPPING_MALL_ZS
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+        }
+    }
+
+    packagingOptions {
+        exclude "META-INF/DEPENDENCIES"
+        exclude "META-INF/NOTICE"
+        exclude "META-INF/LICENSE"
+        exclude "META-INF/LICENSE.txt"
+        exclude "META-INF/NOTICE.txt"
+        exclude "META-INF/ASL2.0"
+        exclude "META-INF/notice.txt"
+        exclude "META-INF/rxjava.properties"
+        doNotStrip "*/mips/*.so"
+        doNotStrip "*/mips64/*.so"
+        doNotStrip "*/armeabi/*.so"
+
+    }
+
+    //统一资源前缀，规范资源引用
+    resourcePrefix "base_"
+
+
+}
+
+
+dependencies {
+
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    //support
+    api rootProject.ext.dependencies["constraint-layout"]
+    api rootProject.ext.dependencies["annotations"]
+    api(rootProject.ext.dependencies["appcompat-v7"]) {
+        exclude module: 'support-annotations'
+        exclude module: 'support-v4'
+    }
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
+    api(rootProject.ext.dependencies["cardview-v7"]) {
+        exclude module: 'support-annotations'
+    }
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    //recyclerview的databinding套装
+    api rootProject.ext.dependencies["bindingcollectionadapter"]
+    api(rootProject.ext.dependencies["bindingcollectionadapter-recyclerview"]) {
+        exclude group: 'com.android.support'
+    }
+    //mvvm arch
+    api rootProject.ext.dependencies["lifecycle-runtime"]
+    api rootProject.ext.dependencies["lifecycle-extensions"]
+    api rootProject.ext.dependencies["lifecycle-common"]
+    annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
+    //network
+    api(rootProject.ext.dependencies["retrofit"]) {
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+    }
+    api(rootProject.ext.dependencies["retrofit-converter-gson"]) {
+        exclude module: 'gson'
+        exclude module: 'okhttp'
+        exclude module: 'okio'
+        exclude module: 'retrofit'
+    }
+    api(rootProject.ext.dependencies["retrofit-adapter-rxjava"]) {
+        exclude module: 'rxjava'
+        exclude module: 'okhttp'
+        exclude module: 'retrofit'
+        exclude module: 'okio'
+    }
+    api rootProject.ext.dependencies["okhttp3"]
+    api(rootProject.ext.dependencies["glide"]) {
+        exclude module: 'support-v4'
+    }
+    //    implementation(rootProject.ext.dependencies["glide4"]) {
+    //        exclude module: 'support-v4'
+    //    }
+    api rootProject.ext.dependencies["glide-loader-okhttp3"]
+    api rootProject.ext.dependencies["glide-transformations"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["okhttputils"]
+    //rx1 and tools
+    api rootProject.ext.dependencies["rxjava"]
+    api rootProject.ext.dependencies["rxandroid"]
+    api rootProject.ext.dependencies["rxbinding"]
+    api rootProject.ext.dependencies["rxlifecycle"]
+    api rootProject.ext.dependencies["rxlifecycle-components"]
+    api rootProject.ext.dependencies["rxpermissions"]
+    //view
+    api rootProject.ext.dependencies["brvah"]
+    api rootProject.ext.dependencies["CircleImageview"]
+    api rootProject.ext.dependencies["LRecyclerView"]
+    api rootProject.ext.dependencies["MaterialDialog"]
+    api rootProject.ext.dependencies["DialogPlus"]
+    api rootProject.ext.dependencies["ShortcutBadger"]
+    api rootProject.ext.dependencies["SmartRefresh"]
+    api rootProject.ext.dependencies["StatusbarUtil"]
+    api rootProject.ext.dependencies["PickerView"]
+    api rootProject.ext.dependencies["BubbleSeekbar"]
+    api rootProject.ext.dependencies["PhotoView"]
+    api rootProject.ext.dependencies["matisse"]
+    api rootProject.ext.dependencies["imagewatcher"]
+    api rootProject.ext.dependencies["gif-drawable"]
+    api rootProject.ext.dependencies["joda-time"]
+    api rootProject.ext.dependencies["flowlayout-lib"]
+    api rootProject.ext.dependencies["FlycoTabLayout"]
+    api rootProject.ext.dependencies["circleprogress"]
+    api rootProject.ext.dependencies["ExpandableTextView"]
+    api rootProject.ext.dependencies["http-logging"]
+    api rootProject.ext.dependencies["verticalviewpager"]
+    api rootProject.ext.dependencies["MagicIndicator"]
+    api(rootProject.ext.dependencies["materialdrawer"]) {
+        transitive = true
+    }
+    api rootProject.ext.dependencies["android-image-cropper"]
+    api rootProject.ext.dependencies["RangeSeekBar"]
+    //anim
+    api rootProject.ext.dependencies["easing-library"]
+    api rootProject.ext.dependencies["androidanimations"]
+    //data
+    api rootProject.ext.dependencies["litepal"]
+    api rootProject.ext.dependencies["Luban"]
+    //tools
+    //    api rootProject.ext.dependencies["apache_commons-lang3"]
+    api rootProject.ext.dependencies["walle"]
+    api rootProject.ext.dependencies["logger"]
+    api rootProject.ext.dependencies["multidex"]
+    api rootProject.ext.dependencies["easypermissions"]
+    api rootProject.ext.dependencies["mmkv"]
+    api rootProject.ext.dependencies["relinker"]
+    api rootProject.ext.dependencies["tbssdk"]
+    //阿里路由框架,用于组件之间跳转
+    api rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    //友盟
+    api rootProject.ext.dependencies["umeng-sdk"]
+    api rootProject.ext.dependencies["umeng-common"]
+    api rootProject.ext.dependencies["zxingcore"]
+    api rootProject.ext.dependencies["zxing-android"]
+    api rootProject.ext.dependencies["qiqiu_android"]
+    api rootProject.ext.dependencies["qiqiu_java"]
+    api rootProject.ext.dependencies["bugly-crashreport"]
+    api rootProject.ext.dependencies["VerticalTextView"]
+    api rootProject.ext.dependencies["bugly-nativecrashreport"]
+    //crash-recovery
+    api rootProject.ext.dependencies["crash-recovery"]
+    //test
+    compileOnly rootProject.ext.dependencies["javax.annotation"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+    api 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+
+}

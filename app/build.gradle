@@ -1,0 +1,214 @@
+apply plugin: "com.android.application"
+apply plugin: "walle"
+
+
+def config = rootProject.ext.android
+def signFig = rootProject.ext.SigningConfigs
+
+android {
+
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+
+
+    defaultConfig {
+
+        applicationId config.applicationId
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        multiDexEnabled true
+        multiDexKeepProguard file(config.multiDexKeepPro)
+        multiDexKeepFile file(config.multiDexKeepTxt)
+//        resConfigs config.resConfigZH
+        resValue "string", "app_name", "xxxx"
+
+        ndk {
+//            abiFilters config.DNK_AbiFilter_Armeabi
+            abiFilters config.DNK_AbiFilter_V7a
+//            , "x86"
+
+        }
+
+        dataBinding {
+            enabled = true
+        }
+
+        //阿里路由框架配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+
+    }
+
+    compileOptions {
+        incremental = true  //开启增量编译
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //如果是构建debug包, 则禁用 "png cruncher" (默认cruncherEnabled=true, 禁用以加速构建)
+    def enableCruncher = { ->
+        return !isDebug()
+    }
+
+
+    dexOptions {
+        //优化dex配置
+        dexInProcess true
+        preDexLibraries true
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+    }
+
+
+    aaptOptions { //禁用cruncher, 以加速编译
+        cruncherEnabled = enableCruncher()
+        cruncherProcesses = 0
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        quiet true
+        abortOnError false
+        ignoreWarnings true
+        disable "InvalidPackage", "ResourceType", "TypographyFractions", "TypographyQuotes"
+        enable "RtlHardcoded", "RtlCompat", "RtlEnabled"
+        check "NewApi", "InlinedApi"
+    }
+
+    //跳过Lint和Test相关的task, 以加速编译
+    if (isDebug()) {
+        gradle.taskGraph.whenReady {
+            tasks.each { task ->
+                if (task.name.contains("Test") || task.name.contains("Lint")) {
+                    task.enabled = false
+                }
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ["libs"]
+        }
+    }
+
+
+    signingConfigs {
+        defaultConfig {
+            keyAlias signFig.keyAlias
+            keyPassword signFig.keyPassword
+            storeFile file(signFig.storeFile)
+            storePassword signFig.storePassword
+        }
+
+    }
+
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "false"//不Log
+            buildConfigField "boolean", "USE_CANARY", "false"
+            buildConfigField "String", "BASE_URL", BASE_URL_TS //服务器地址
+            buildConfigField "String", "SHOPPING_MALL", SHOPPING_MALL_TS //网页地址
+            crunchPngs false //关闭crunchPng优化, 以加快构建
+            debuggable true //是否生成一个可调式的apk
+            minifyEnabled false //移出无用的java代码
+            zipAlignEnabled false// Zipalign优化
+            shrinkResources false// 移除无用的resource文件
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+            signingConfig signingConfigs.defaultConfig
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            buildConfigField "String", "BASE_URL", BASE_URL_ZS
+            buildConfigField "String", "SHOPPING_MALL", SHOPPING_MALL_ZS
+            crunchPngs false
+            debuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+            signingConfig signingConfigs.defaultConfig
+        }
+
+        debugTest {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            buildConfigField "String", "BASE_URL", BASE_URL_TS
+            buildConfigField "String", "SHOPPING_MALL", SHOPPING_MALL_TS
+            crunchPngs false
+            debuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile(config.proguardAndroidTxt), config.proguardRulesPro
+            signingConfig signingConfigs.defaultConfig
+
+
+        }
+
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def parent = "apk/" + buildType.name + "/"
+            def apkName
+            if (buildType.name == 'release') {
+                apkName = "xld_zs_${defaultConfig.versionName}.apk"
+            } else {
+                apkName = "xld_ts_${releaseTime()}_${defaultConfig.versionName}.apk"
+            }
+
+            outputFileName = apkName
+        }
+    }
+
+
+}
+
+repositories {
+    flatDir {
+        dirs "libs"
+
+    }
+}
+def releaseTime() {
+    return new Date().format("MMdd_HHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+
+dependencies {
+
+    implementation fileTree(include: ["*.jar"], dir: "libs")
+
+    api rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+
+    implementation project(":lib_third_party")
+    implementation project(path: ':lib_base_mvvm')//三方lib库
+//    implementation 'com.github.yoyoyaobin:PreventKeyboardBlockUtil:1.0.8'//处理输入框
+
+
+}
+
+walle {
+    // 指定渠道包的输出路径
+    apkOutputFolder = new File("${project.buildDir}/outputs/channels")
+    // 定制渠道包的APK的文件名称
+//        apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+    apkFileNameFormat = config.Walle_apkFileName
+    // 渠道配置文件
+    channelFile = new File("${project.getProjectDir()}/channel")
+}
+
+//./gradlew clean assembleReleaseChannels -PchannelList=meituan
+

@@ -1,0 +1,246 @@
+ext {
+
+    android = [
+            compileSdkVersion    : 29,
+            buildToolsVersion    : '30.0.0',
+            minSdkVersion        : 21,
+            devSdkVersion        : 21,
+            targetSdkVersion     : 29,
+//            resConfigZH          : 'zh',
+            multiDexKeepPro      : 'multiDexKeep.pro',
+            multiDexKeepTxt      : 'multiDexKeep.txt',
+            DNK_AbiFilter_Armeabi: 'armeabi',
+            DNK_AbiFilter_V7a    : 'armeabi-v7a',//用v7a只是体验更好
+            DNK_AbiFilter_V8a    : 'arm64-v8a',//在 Google Play 中发布的应用都必须提供 64 位版本
+            DNK_AbiFilter_X86    : 'x86',//用于模拟器调试
+            proguardAndroidTxt   : 'proguard-android.txt',
+            proguardRulesPro     : 'proguard-rules.pro',
+            DexMaxProcessCount   : 8,
+            JavaMaxHeapSize      : '2560m',
+            applicationId        : 'com.lianshi.xianlvyoushi',
+            versionCode          : 1260,
+            versionName          : '1.2.6',
+            Walle_apkFileName    : 'xlys_${channel}.apk'
+    ]
+
+
+    getui_config = [
+            PACKAGE_NAME: "com.lianshi.duanshipin",
+    ]
+
+    SigningConfigs = [
+            keyAlias     : "manager",
+            keyPassword  : "1qaz@WSX",
+            storeFile    : "keystore/duanshipin.jks",
+            storePassword: "1qaz@WSX"
+
+    ]
+
+    version = [
+            androidXSdkVersion     : "1.1.0",
+            androidXArchSdkVersion : "2.1.0",
+            multidex_version       : "1.0.3",
+
+            retrofitSdkVersion     : "2.3.0",
+            okhttp3_version        : "3.12.0",
+            otto_version           : "1.3.8",
+            gson_version           : "2.8.2",
+            glideSdkVersion        : "3.7.0",
+            glideSdkVersion4       : "4.8.0",
+            dagger2SdkVersion      : "2.15",
+            litepal_version        : "3.0.0",
+            luban_version          : "1.1.3",
+            filedownloader_version : "1.7.7",
+
+            rxjava_version         : "1.3.2",
+            rxjava_android_version : "1.2.1",
+            rxjava_binding_version : "0.4.0",
+            rxpermissions_version  : "0.9.4@aar",
+            rxlifecycleSdkVersion  : "1.0",
+
+            rxjava2_version        : "2.1.6",
+            rxjava2_android_version: "2.0.1",
+            rxjava2_binding_version: "2.1.1",
+            rxpermissions2_version : "0.9.5@aar",
+            rxlifecycle2SdkVersion : "2.2.1",
+
+            router_version         : "1.5.0",
+            router_compiler_version: "1.2.2",
+
+            espressoSdkVersion     : "3.0.1",
+            canarySdkVersion       : "1.5.4",
+            //kotlin库
+    ]
+
+
+    dependencies = [
+
+            //kotlin 库
+
+            //support
+            "appcompat-v7"                         : "androidx.appcompat:appcompat:1.0.2",
+            "design"                               : "com.google.android.material:materia:1.0.0-alpha1",
+            "cardview-v7"                          : "androidx.cardview:cardview:1.0.0",
+            "annotations"                          : "com.android.support:support-annotations:${version["androidXSdkVersion"]}",
+            "recyclerview-v7"                      : "androidx.annotation:annotation:${version["androidXSdkVersion"]}",
+            "constraint-layout"                    : "androidx.constraintlayout:constraintlayout:1.1.2",      //约束布局
+            "support-exifinterface"                : "androidx.exifinterface:exifinterface:${version["androidXSdkVersion"]}",
+
+            //view
+            "brvah"                                : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46",
+            "SuperTextView"                        : "com.github.lygttpod:SuperTextView:2.1.8",
+            "ExpandableTextView"                   : "com.ms-square:expandableTextView:0.1.4",
+            "vlayout"                              : "com.alibaba.android:vlayout:1.1.0@aar",//ali recyclerview layoutmanager扩展
+            "CircleImageview"                      : "de.hdodenhof:circleimageview:2.2.0",
+            "MaterialDialog"                       : "me.drakeet.materialdialog:library:1.3.1",
+            "ShortcutBadger"                       : "me.leolin:ShortcutBadger:1.1.18@aar",
+            "DialogPlus"                           : "com.orhanobut:dialogplus:1.11@aar",
+            "SmartRefresh"                         : "com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1",
+            "StatusbarUtil"                        : "com.jaeger.statusbarutil:library:1.5.1",
+            "PickerView"                           : "com.contrarywind:Android-PickerView:3.2.6",
+            "matisse"                              : "com.zhihu.android:matisse:0.5.3-beta3",
+            "BubbleSeekbar"                        : "com.xw.repo:bubbleseekbar:3.12",
+            "LRecyclerView"                        : "com.github.jdsjlzx:LRecyclerView:1.5.0",
+            "FlycoTabLayout"                       : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            "QRCode"                               : "com.github.XuDaojie:QRCode-Android:v0.4.2",
+            "PhotoView"                            : "com.github.chrisbanes:PhotoView:2.1.3",
+            "imagewatcher"                         : "com.byc:ImageWatcher:1.0.3",     //图片查看器
+            "gif-drawable"                         : "pl.droidsonroids.gif:android-gif-drawable:1.2.10",//gif图片加载控件
+            "joda-time"                            : "joda-time:joda-time:2.9.9",
+            "flowlayout-lib"                       : "com.hyman:flowlayout-lib:1.1.2",//流式textview标签
+            "materialdrawer"                       : "com.mikepenz:materialdrawer:6.0.9@aar",//one drawer(抽屉效果)
+            "android-image-cropper"                : "com.theartofdev.edmodo:android-image-cropper:2.7.0",//强大的图片裁剪工具库
+            "subsampling-scale-image"              : "com.davemorrissey.labs:subsampling-scale-image-view:3.10.0",//pdf引用的工具
+            "BasePopup"                            : "com.github.razerdp:BasePopup:1.9.4",//popup  的依赖
+            "recyclerview-swipe"                   : "com.yanzhenjie:recyclerview-swipe:1.1.4",//侧滑菜单，粘性头
+            "circleprogress"                       : "com.github.lzyzsd:circleprogress:1.2.1",
+            "RangeSeekBar"                         : "com.github.Jay-Goo:RangeSeekBar:v2.0.6",
+            "verticalviewpager"                    : "com.github.castorflex.verticalviewpager:library:19.0.1",
+            "MagicIndicator"                       : "com.github.hackware1993:MagicIndicator:1.5.0",
+            "VerticalTextView"                     : "com.github.paradoxie:AutoVerticalTextview:0.1",
+            //recyclerview的databinding套装
+            "bindingcollectionadapter"             : "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0",
+            "bindingcollectionadapter-recyclerview": "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0",
+            "BottomDialog"                         : "com.github.SmartCyl:BottomDialog:1.0.4",
+
+            //video
+
+            //data
+            "litepal"                              : "org.litepal.android:java:${version["litepal_version"]}",//数据库
+            "Luban"                                : "top.zibin:Luban:${version["luban_version"]}",        //图片压缩算法，最接近微信图片压缩算法策略
+
+            //anim
+            "easing-library"                       : "com.daimajia.easing:library:2.0@aar",
+            "androidanimations"                    : "com.daimajia.androidanimations:library:2.3@aar",
+            "nineoldandroids"                      : "com.nineoldandroids:library:2.4.0",
+
+            //mvvm( Lifecycles, LiveData, and ViewModel, Room)
+            "lifecycle-common"                     : "androidx.lifecycle:lifecycle-common:${version["androidXArchSdkVersion"]}",
+            "lifecycle-runtime"                    : "androidx.lifecycle:lifecycle-runtime:${version["androidXArchSdkVersion"]}",
+            "lifecycle-extensions"                 : "androidx.lifecycle:lifecycle-extensions:${version["androidXArchSdkVersion"]}",
+            "lifecycle-compiler"                   : "androidx.lifecycle:lifecycle-compiler:${version["androidXArchSdkVersion"]}",
+            "room-runtime"                         : "androidx.room:room-runtime:${version["androidXArchSdkVersion"]}",
+            "room-compiler"                        : "androidx.room:room-compiler:${version["androidXArchSdkVersion"]}",
+            "room-testing"                         : "androidx.room:room-testing:${version["androidXArchSdkVersion"]}",
+            "room-rxjava2"                         : "androidx.room:room-rxjava2:${version["androidXArchSdkVersion"]}",
+
+            //network
+            "retrofit"                             : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+            "retrofit-converter-gson"              : "com.squareup.retrofit2:converter-gson:${version["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava"              : "com.squareup.retrofit2:adapter-rxjava:${version["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava2"             : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitSdkVersion"]}",
+            "retrofit-url-manager"                 : "me.jessyan:retrofit-url-manager:1.3.0",
+            "okhttp3"                              : "com.squareup.okhttp3:okhttp:${version["okhttp3_version"]}",
+            "okhttp-urlconnection"                 : "com.squareup.okhttp:okhttp-urlconnection:2.0.0",
+
+            "glide"                                : "com.github.bumptech.glide:glide:${version["glideSdkVersion"]}",
+            "glide-compiler"                       : "com.github.bumptech.glide:compiler:${version["glideSdkVersion"]}",
+            "glide-loader-okhttp3"                 : "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar",
+            "glide-transformations"                : "jp.wasabeef:glide-transformations:2.0.2",
+            "okhttputils"                          : "com.zhy:okhttputils:2.6.2",
+            //glide 4.X
+            "glide4"                               : "com.github.bumptech.glide:glide:${version["glideSdkVersion4"]}",
+            "glide-compiler4"                      : "com.github.bumptech.glide:compiler:${version["glideSdkVersion4"]}",
+
+            //rx1
+            "rxjava"                               : "io.reactivex:rxjava:${version["rxjava_version"]}",
+            "rxandroid"                            : "io.reactivex:rxandroid:${version["rxjava_android_version"]}",
+            "rxbinding"                            : "com.jakewharton.rxbinding:rxbinding:${version["rxjava_binding_version"]}",
+            "rxlifecycle"                          : "com.trello:rxlifecycle:${version["rxlifecycleSdkVersion"]}",
+            "rxlifecycle-components"               : "com.trello:rxlifecycle-components:${version["rxlifecycleSdkVersion"]}",
+            "rxcache"                              : "com.github.VictorAlbertos.RxCache:runtime:1.7.0-1.x",
+            "rxbinding-recyclerview-v7"            : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.1",
+            "rxpermissions"                        : "com.tbruyelle.rxpermissions:rxpermissions:${version["rxpermissions_version"]}",
+            "rxerrorhandler"                       : "me.jessyan:rxerrorhandler:1.0.1",
+            //rx2
+            "rxjava2"                              : "io.reactivex.rxjava2:rxjava:${version["rxjava2_version"]}",
+            "rxandroid2"                           : "io.reactivex.rxjava2:rxandroid:${version["rxjava2_android_version"]}",
+            "rxbinding2"                           : "com.jakewharton.rxbinding2:rxbinding:${version["rxjava2_binding_version"]}",
+            "rxlifecycle2"                         : "com.trello.rxlifecycle2:rxlifecycle:2.1.0",
+            "rxlifecycle-components2"              : "com.trello.rxlifecycle2:rxlifecycle-components:2.1.0",
+            "rx2cache"                             : "com.github.VictorAlbertos.RxCache:runtime:1.8.1-2.x",
+            "rxbinding-recyclerview-v7"            : "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:1.0.1",
+            "rxpermissions2"                       : "com.tbruyelle.rxpermissions2:rxpermissions:${version["rxpermissions2_version"]}",
+            "rxerrorhandler2"                      : "me.jessyan:rxerrorhandler:2.1.0",
+
+            //rx-gson-tools
+            "rxcache-jolyglot-gson"                : "com.github.VictorAlbertos.Jolyglot:gson:0.0.3",
+
+            //tools
+            "dagger2"                              : "com.google.dagger:dagger:${version["dagger2SdkVersion"]}",
+            "dagger2-compiler"                     : "com.google.dagger:dagger-compiler:${version["dagger2SdkVersion"]}",
+            "dagger2-android"                      : "com.google.dagger:dagger-android:${version["dagger2SdkVersion"]}",
+            "dagger2-android-support"              : "com.google.dagger:dagger-android-support:${version["dagger2SdkVersion"]}",
+            "dagger2-android-processor"            : "com.google.dagger:dagger-android-processor:${version["dagger2SdkVersion"]}",
+            "androideventbus"                      : "org.simple:androideventbus:1.0.5.1",
+            "gson"                                 : "com.google.code.gson:gson:${version["gson_version"]}",
+            "multidex"                             : "com.android.support:multidex:${version["multidex_version"]}",
+            "apache_commons-lang3"                 : "org.apache.commons:commons-lang3:3.4",
+            "walle"                                : "com.meituan.android.walle:library:1.1.6",
+            "otto"                                 : "com.squareup:otto:${version["otto_version"]}",
+            "javax.annotation"                     : "javax.annotation:jsr250-api:1.0",
+            "mmkv"                                 : "com.tencent:mmkv-static:1.2.2",//代替sp存储
+            "relinker"                             : "com.getkeepsafe.relinker:relinker:1.4.0",//mmkv可能在手机版本上so文件找不到
+            "tbssdk"                               : "com.tencent.tbs.tbssdk:sdk:43939",//x5WebView
+            //阿里路由框架
+            "arouter-api"                          : "com.alibaba:arouter-api:${version["router_version"]}",
+            "arouter-compiler"                     : "com.alibaba:arouter-compiler:${version["router_compiler_version"]}",
+            "easypermissions"                      : "pub.devrel:easypermissions:1.2.0",
+            "zxingcore"                            : 'com.google.zxing:core:3.2.1',
+            "zxing-android"                        : 'com.journeyapps:zxing-android-embedded:3.3.0',
+            "zxing-javase"                         : 'com.google.zxing:javase:3.1.0',
+            "http-logging"                         : 'com.squareup.okhttp3:logging-interceptor:3.8.1',
+            //三方sdk
+            "umeng-sdk"                            : "com.umeng.umsdk:analytics:8.0.2",
+            "umeng-common"                         : "com.umeng.umsdk:common:2.0.2",
+            "umeng-share-core"                     : "com.umeng.sdk:share-core:6.9.4",
+            "umeng-share-qq"                       : "com.umeng.sdk:share-qq:6.9.4",
+            "umeng-share-wechat"                   : "com.umeng.sdk:share-wechat:6.9.4",
+            "umeng-share-sina"                     : "com.umeng.sdk:share-sina:6.9.4",
+            "umeng-share-widget"                   : "com.umeng.sdk:shareboard-widget:6.9.4",
+            "bugly-crashreport"                    : "com.tencent.bugly:crashreport:2.8.6",
+            "bugly-nativecrashreport"              : "com.tencent.bugly:nativecrashreport:3.6.0",
+
+            //qiniu
+            "qiqiu_android"                        : 'com.qiniu:qiniu-android-sdk:7.3.15',
+            "qiqiu_java"                           : 'com.qiniu:qiniu-java-sdk:7.2.+',
+
+            //test
+            "junit"                                : "junit:junit:4.12",
+            "androidJUnitRunner"                   : "android.support.test.runner.AndroidJUnitRunner",
+            "runner"                               : "com.android.support.test:runner:1.0.1",
+            "espresso-core"                        : "com.android.support.test.espresso:espresso-core:${version["espressoSdkVersion"]}",
+            "espresso-contrib"                     : "com.android.support.test.espresso:espresso-contrib:${version["espressoSdkVersion"]}",
+            "espresso-intents"                     : "com.android.support.test.espresso:espresso-intents:${version["espressoSdkVersion"]}",
+            "mockito-core"                         : "org.mockito:mockito-core:1.+",
+            "timber"                               : "com.jakewharton.timber:timber:4.6.0",//log
+            "logger"                               : "com.orhanobut:logger:1.15",//log
+            "canary-debug"                         : "com.squareup.leakcanary:leakcanary-android:${version["canarySdkVersion"]}",
+            "canary-release"                       : "com.squareup.leakcanary:leakcanary-android-no-op:${version["canarySdkVersion"]}",
+            "crash-recovery"                       : "com.zxy.android:recovery:1.0.0",
+
+
+    ]
+
+
+}

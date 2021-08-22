@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="UnusedResources">
+        <ignore path="src/main/res/drawable-xhdpi/base_jubao_launcher.png" />
+        <ignore path="src/main/res/mipmap/base_ic_launcher.png" />
+    </issue>
+</lint>

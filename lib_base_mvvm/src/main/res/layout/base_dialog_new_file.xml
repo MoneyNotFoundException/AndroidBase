@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_dialog_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="@dimen/base_dip_250"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/base_margin_9"
+                android:layout_marginTop="@dimen/base_magin_12"
+                android:text=""
+                android:textColor="@color/base_colorText40"
+                android:textSize="@dimen/base_sp_15" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/base_colorText43"
+                android:textSize="@dimen/base_sp_13" />
+
+            <EditText
+                android:id="@+id/et_file_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_dip_24"
+                android:layout_marginLeft="@dimen/base_dip_25"
+                android:layout_marginRight="@dimen/base_dip_25"
+                android:layout_marginTop="@dimen/base_dip_10"
+                android:background="@drawable/base_background_bg_edit_shape"
+                android:hint=""
+                android:maxLength="6"
+                android:paddingLeft="@dimen/base_magin_10"
+                android:paddingRight="@dimen/base_magin_10"
+                android:textColor="@color/base_colorText40"
+                android:textColorHint="@color/base_colorText44"
+                android:textSize="@dimen/sp_12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/base_magin_15"
+            android:background="#D1D1D1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/base_margin_40"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/base_cancel"
+                android:textColor="@color/base_colorText1"
+                android:textSize="@dimen/base_sp_18" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#D1D1D1" />
+
+            <Button
+                android:id="@+id/confirm_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="@string/base_confirm"
+                android:textColor="@color/base_pickerview_topbar_title"
+                android:textSize="@dimen/base_sp_18" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
