@@ -10,7 +10,6 @@ import android.view.View;
 
 import com.jaeger.library.StatusBarUtil;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
-import com.umeng.analytics.MobclickAgent;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -355,14 +354,12 @@ public abstract class BaseActivity<VB extends ViewDataBinding, VM extends BaseVi
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(mContext);
     }
 
 
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(mContext);
     }
 
     /**

@@ -4,10 +4,10 @@ buildscript {
     repositories {
         google()
         jcenter()
-        
+        maven { url 'https://repo1.maven.org/maven2/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.android.tools.build:gradle:4.2.0'
         apply from: "config.gradle"
         classpath "com.meituan.android.walle:plugin:1.1.6"
         // NOTE: Do not place your application dependencies here; they belong
@@ -19,7 +19,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'https://repo1.maven.org/maven2/' }
         maven { url "https://jitpack.io" }
     }
 }

@@ -198,8 +198,8 @@ dependencies {
     api rootProject.ext.dependencies["arouter-api"]
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     //友盟
-    api rootProject.ext.dependencies["umeng-sdk"]
-    api rootProject.ext.dependencies["umeng-common"]
+//    api rootProject.ext.dependencies["umeng-sdk"]
+//    api rootProject.ext.dependencies["umeng-common"]
     api rootProject.ext.dependencies["zxingcore"]
     api rootProject.ext.dependencies["zxing-android"]
     api rootProject.ext.dependencies["qiqiu_android"]

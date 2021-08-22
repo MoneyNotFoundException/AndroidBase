@@ -67,8 +67,8 @@ dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api project(':lib_base_mvvm')
     //友盟
-    api rootProject.ext.dependencies["umeng-sdk"]
-    api rootProject.ext.dependencies["umeng-common"]
+//    api rootProject.ext.dependencies["umeng-sdk"]
+//    api rootProject.ext.dependencies["umeng-common"]
     //    api rootProject.ext.dependencies["umeng-share-core"]
     //    api rootProject.ext.dependencies["umeng-share-qq"]
     //    api rootProject.ext.dependencies["umeng-share-wechat"]
