@@ -17,25 +17,25 @@
 #}
 #---------------------------------1.实体类---------------------------------
 
-#组件化之后keep的实体
--keep public class  cn.lianshi.library.mvvmbase.net.pojo.BaseEntity { *; }
-#继承类不混淆
--keep public class * extends cn.lianshi.library.mvvmbase.net.pojo.BaseEntity { *; }
-#继承内部类不混淆
--keep public class *$* extends cn.lianshi.library.mvvmbase.net.pojo.BaseEntity { *; }
+##组件化之后keep的实体
+#-keep public class  cn.walter.library.mvvmbase.net.pojo.BaseEntity { *; }
+##继承类不混淆
+#-keep public class * extends cn.walter.library.mvvmbase.net.pojo.BaseEntity { *; }
+##继承内部类不混淆
+#-keep public class *$* extends cn.walter.library.mvvmbase.net.pojo.BaseEntity { *; }
 #以上内部类keep方法没用，只能keep包下实体
 #base module
--keep class cn.lianshi.library.mvvmbase.net.pojo.**{*;}
--keep class cn.lianshi.library.mvvmbase.poje.**{*;}
+-keep class cn.walter.library.mvvmbase.net.pojo.**{*;}
+-keep class cn.walter.library.mvvmbase.poje.**{*;}
 #third lib module
--keep class cn.lianshi.thirdlib.pojo.**{*;}
--keep class cn.lianshi.thirdlib.dao.**{*;}
+-keep class cn.walter.thirdlib.pojo.**{*;}
+-keep class cn.walter.thirdlib.dao.**{*;}
 #userinfo module
--keep class cn.lianshi.userinfo.pojo.**{*;}
+-keep class cn.walter.userinfo.pojo.**{*;}
 #user_login
--keep class cn.lianshi.login.poje.**{*;}
+-keep class cn.walter.login.poje.**{*;}
 #实体类不混淆
--keep class com.lianshi.duanshipin.bean.**{*;}
+-keep class com.walter.duanshipin.bean.**{*;}
 #七牛云
 -keep class com.qiniu.**{*;}
 -keep class com.qiniu.**{public <init>();}
@@ -66,7 +66,7 @@
 -keep class android.taobao.windvane.**{*;}
 
 #组件化之后keep module init类
--keep public class * implements cn.lianshi.library.mvvmbase.component.base.IModuleInit
+-keep public class * implements cn.walter.library.mvvmbase.component.base.IModuleInit
 
 
 #-------------------------------------------------------------------------
@@ -401,7 +401,7 @@
    public <init> (org.json.JSONObject);
 }
 
--keep public class com.lianshi.duanshipin.R$*{
+-keep public class com.walter.duanshipin.R$*{
 public static final int *;
 }
 

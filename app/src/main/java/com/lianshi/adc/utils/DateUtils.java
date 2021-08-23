@@ -1,4 +1,4 @@
-package com.lianshi.adc.utils;
+package com.walter.adc.utils;
 
 import java.text.DateFormat;
 import java.text.ParseException;

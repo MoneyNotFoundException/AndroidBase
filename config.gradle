@@ -17,7 +17,7 @@ ext {
             proguardRulesPro     : 'proguard-rules.pro',
             DexMaxProcessCount   : 8,
             JavaMaxHeapSize      : '2560m',
-            applicationId        : 'com.lianshi.xianlvyoushi',
+            applicationId        : 'com.walter.xianlvyoushi',
             versionCode          : 1260,
             versionName          : '1.2.6',
             Walle_apkFileName    : 'xlys_${channel}.apk'
@@ -25,7 +25,7 @@ ext {
 
 
     getui_config = [
-            PACKAGE_NAME: "com.lianshi.duanshipin",
+            PACKAGE_NAME: "com.walter.duanshipin",
     ]
 
     SigningConfigs = [

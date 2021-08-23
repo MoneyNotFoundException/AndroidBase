@@ -1,4 +1,4 @@
-package com.lianshi.adc.view.activity;
+package com.walter.adc.view.activity;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -10,10 +10,10 @@ import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.lianshi.adc.BR;
-import com.lianshi.adc.R;
-import com.lianshi.adc.databinding.ActivityMainBinding;
-import com.lianshi.adc.viewModel.MainViewModel;
+import com.walter.adc.BR;
+import com.walter.adc.R;
+import com.walter.adc.databinding.ActivityMainBinding;
+import com.walter.adc.viewModel.MainViewModel;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
@@ -23,9 +23,9 @@ import java.util.Locale;
 
 import androidx.lifecycle.Observer;
 import byc.imagewatcher.ImageWatcher;
-import cn.lianshi.library.mvvmbase.base.BaseActivity;
-import cn.lianshi.library.mvvmbase.utils.GsonUtil;
-import cn.lianshi.library.mvvmbase.utils.ui.ImageWatcherUtils;
+import cn.walter.library.mvvmbase.base.BaseActivity;
+import cn.walter.library.mvvmbase.utils.GsonUtil;
+import cn.walter.library.mvvmbase.utils.ui.ImageWatcherUtils;
 
 /**
  * Created by Walter on 2020-05-18.

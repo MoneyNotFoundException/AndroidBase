@@ -4,7 +4,7 @@
     <version value="1" />
     <hotKeyList>
 <!--        <list>-->
-<!--            <mapping class="com.lianshi.duanshipin.bean.CaoGaoBean"/>-->
+<!--            <mapping class="com.walter.duanshipin.bean.CaoGaoBean"/>-->
 <!--        </list>-->
 
     </hotKeyList>

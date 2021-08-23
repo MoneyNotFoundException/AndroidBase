@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="cn.lianshi.thirdlib">
+    package="cn.walter.thirdlib">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -72,12 +72,12 @@
         <!-- 微信 -->
 
         <activity
-            android:name="cn.lianshi.duanshipin.wxapi.WXEntryActivity"
+            android:name="cn.walter.duanshipin.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name="cn.lianshi.duanshipin.wxapi.WXPayEntryActivity"
+            android:name="cn.walter.duanshipin.wxapi.WXPayEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />

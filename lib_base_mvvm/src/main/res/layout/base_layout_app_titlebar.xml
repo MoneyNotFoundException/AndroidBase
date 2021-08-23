@@ -7,7 +7,7 @@
 
     <!--<variable-->
     <!--name="titleBarViewModel"-->
-    <!--type="cn.lianshi.library.mvvmbase.base.TitleBarViewModel"/>-->
+    <!--type="cn.walter.library.mvvmbase.base.TitleBarViewModel"/>-->
     <!--</data>-->
 
     <RelativeLayout

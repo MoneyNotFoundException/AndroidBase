@@ -1,8 +1,8 @@
-package com.lianshi.adc.model;
+package com.walter.adc.model;
 
 import android.app.Application;
 
-import cn.lianshi.library.mvvmbase.base.BaseModel;
+import cn.walter.library.mvvmbase.base.BaseModel;
 
 public class HomeModel extends BaseModel {
     public HomeModel(Application application) {

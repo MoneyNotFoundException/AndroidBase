@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.lianshi.adc.viewModel.MainViewModel" />
+            type="com.walter.adc.viewModel.MainViewModel" />
 
         <import type="android.view.View" />
 

@@ -1,4 +1,4 @@
-package com.lianshi.adc.config;
+package com.walter.adc.config;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -6,9 +6,9 @@ import android.content.res.Resources;
 
 import com.bumptech.glide.Glide;
 
-import cn.lianshi.library.mvvmbase.base.BaseApplication;
-import cn.lianshi.library.mvvmbase.component.config.ModuleLifecycleConfig;
-import cn.lianshi.library.mvvmbase.utils.LogUtils;
+import cn.walter.library.mvvmbase.base.BaseApplication;
+import cn.walter.library.mvvmbase.component.config.ModuleLifecycleConfig;
+import cn.walter.library.mvvmbase.utils.LogUtils;
 
 /**
  * Created by yx on 2016/7/12.

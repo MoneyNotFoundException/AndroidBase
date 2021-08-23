@@ -12,7 +12,7 @@
               android:paddingRight="@dimen/base_dip_20"
               android:paddingTop="@dimen/base_dip_15">
 
-    <cn.lianshi.library.mvvmbase.widget.mdui.ProgressWheel
+    <cn.walter.library.mvvmbase.widget.mdui.ProgressWheel
         android:layout_width="@dimen/base_dip_35"
         android:layout_height="@dimen/base_dip_35"
         wheel:matProg_barColor="@color/base_colorWhite"

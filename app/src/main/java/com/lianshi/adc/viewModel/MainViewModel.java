@@ -1,18 +1,18 @@
-package com.lianshi.adc.viewModel;
+package com.walter.adc.viewModel;
 
 import android.app.Application;
 
-import com.lianshi.adc.model.UserInfoModel;
+import com.walter.adc.model.UserInfoModel;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
-import cn.lianshi.library.mvvmbase.base.BaseViewModel;
-import cn.lianshi.library.mvvmbase.binding.command.BindingAction;
-import cn.lianshi.library.mvvmbase.binding.command.BindingCommand;
-import cn.lianshi.library.mvvmbase.bus.event.SingleLiveEvent;
+import cn.walter.library.mvvmbase.base.BaseViewModel;
+import cn.walter.library.mvvmbase.binding.command.BindingAction;
+import cn.walter.library.mvvmbase.binding.command.BindingCommand;
+import cn.walter.library.mvvmbase.bus.event.SingleLiveEvent;
 
 /**
  * Created by Walter on 2020-05-19.
