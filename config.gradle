@@ -201,7 +201,7 @@ ext {
             "javax.annotation"                     : "javax.annotation:jsr250-api:1.0",
             "mmkv"                                 : "com.tencent:mmkv-static:1.2.2",//代替sp存储
             "relinker"                             : "com.getkeepsafe.relinker:relinker:1.4.0",//mmkv可能在手机版本上so文件找不到
-            "tbssdk"                               : "com.tencent.tbs.tbssdk:sdk:43939",//x5WebView
+//            "tbssdk"                               : "com.tencent.tbs.tbssdk:sdk:43939",//x5WebView
             //阿里路由框架
             "arouter-api"                          : "com.alibaba:arouter-api:${version["router_version"]}",
             "arouter-compiler"                     : "com.alibaba:arouter-compiler:${version["router_compiler_version"]}",

@@ -4,9 +4,6 @@ import android.app.Application;
 import android.content.Intent;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.tencent.smtt.export.external.DexClassLoaderProviderService;
-import com.tencent.smtt.export.external.TbsCoreSettings;
-import com.tencent.smtt.sdk.QbSdk;
 import com.zxy.recovery.core.Recovery;
 
 import org.litepal.LitePal;
@@ -60,41 +57,6 @@ public class BaseModuleInit implements IModuleInit {
      * @param application
      */
     private void initX5Core(Application application) {
-
-        HashMap<String, Object> map = new HashMap<>();
-        map.put(TbsCoreSettings.TBS_SETTINGS_USE_SPEEDY_CLASSLOADER, true);
-        QbSdk.initTbsSettings(map);
-
-        //3.由于coloros的OPPO手机自动熄屏一段时间后，会启用系统自带的电量优化管理，禁止一切自启动的APP（用户设置的自启动白名单除外），需要try catch
-        try {
-
-//            X5InitService.startService(application);
-            Intent intent = new Intent(application, DexClassLoaderProviderService.class);
-            application.startService(intent);
-
-
-        } catch (Exception e) {
-            LogUtils.w("X5init Service error -> ");
-            e.printStackTrace();
-        }
-
-
-        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
-
-            @Override
-            public void onViewInitFinished(boolean arg0) {
-                LogUtils.w(" onViewInitFinished is : " + arg0);
-
-            }
-
-            @Override
-            public void onCoreInitFinished() {
-                LogUtils.w(" onCoreInitFinished ");
-
-            }
-        };
-
-        QbSdk.initX5Environment(application, cb);
 
     }
 

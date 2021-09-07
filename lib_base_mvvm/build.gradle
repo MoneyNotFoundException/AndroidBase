@@ -193,7 +193,7 @@ dependencies {
     api rootProject.ext.dependencies["easypermissions"]
     api rootProject.ext.dependencies["mmkv"]
     api rootProject.ext.dependencies["relinker"]
-    api rootProject.ext.dependencies["tbssdk"]
+//    api rootProject.ext.dependencies["tbssdk"]
     //阿里路由框架,用于组件之间跳转
     api rootProject.ext.dependencies["arouter-api"]
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
